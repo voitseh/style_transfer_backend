@@ -3,7 +3,7 @@ A TensorFlow implementation of real-time style transfer based on the paper [Perc
 
 ## Algorithm
 
-See my related [blog post](https://shafeentejani.github.io/2017-01-03/fast-style-transfer/) for an overview of the algorithm for real-time style transfer.
+See [blog post](https://shafeentejani.github.io/2017-01-03/fast-style-transfer/) for an overview of the algorithm for real-time style transfer.
 
 The total loss used is the weighted sum of the style loss, the content loss and a total variation loss. This third component is not specfically mentioned in the original paper but leads to more cohesive images being generated.
 
@@ -30,11 +30,11 @@ The total loss used is the weighted sum of the style loss, the content loss and 
 ```python ./main.py```
 
 
-I have made the pre-trained networks for the 3 styles shown in the results section below available. They can be downloaded from [here](https://drive.google.com/open?id=0B7pvkmVwDrF8a3FCVUt5RGhQSlU) (~700MB).
+There is the pre-trained networks for the 3 styles shown in the results section below available. They can be downloaded from [here](https://drive.google.com/open?id=0B7pvkmVwDrF8a3FCVUt5RGhQSlU) (~700MB).
 
 ## Results
 
-I trained three networks style transfers using the following three style images:
+There are trained three networks style transfers using the following three style images:
 
 ![Style Images](results/style_images.png)
 
@@ -44,7 +44,7 @@ Each network was trained with 80,000 training images taken from the [Microsoft C
 
 ## Acknowledgements
 
-This code was inspired by an existing TensorFlow [implementation by Logan Engstrom](https://github.com/lengstrom/fast-style-transfer), and I have re-used most of his transform network code here.
+This code was inspired by an existing TensorFlow [implementation by Logan Engstrom](https://github.com/lengstrom/fast-style-transfer), and I most of his transform network code is re-used here.
 The VGG network code is based on an existing [implementation by Anish Anish Athalye](https://github.com/anishathalye/neural-style)
 
 ## License

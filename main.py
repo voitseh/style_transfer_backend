@@ -142,14 +142,14 @@ class SijaxHandler(object):
                 
                 try:
                     os.system("python {} {} {} {} {} {} {}".format(os.path.join(app.root_path, "stylize_image.py "),"--content ",content," --network-path ", network," --output-path ",output))
-                    response(obj_response, 'border_result', 'stylized_img', output)
+                    response(obj_response, 'card_result', 'stylized_img', output)
                     utils.remove_file(client_data['data'][0], UPLOAD_FOLDER)
                     utils.remove_file(output, UPLOAD_FOLDER)
                     obj_response.html('#server_response',  "")
                 except Exception as e:
                     logging.exception("%s" % e)
-                    obj_response.html('#server_response',  "%s" % e)
-                    #obj_response.html('#server_response',  "Mistake!")
+                    #obj_response.html('#server_response',  "%s" % e)
+                    obj_response.html('#server_response',  "Mistake!")
 
         # handle deleted styles gallery image
         if  'delGalleryImg' in client_data:
